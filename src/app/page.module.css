@@ -116,7 +116,11 @@
 
 .ourSolutions {
     align-items: flex-end;
-    /*background-color: red;*/
+    width: 100%;
+}
+
+.normalButton {
+    margin: auto;
 }
 
 /*################*/
