@@ -199,7 +199,9 @@ export default function Home() {
                                          colorScheme={"colorScheme2"} version={"green"}/>
 
                         <NormalButtonComponent buttonText={"View all products"} colorScheme={"colorScheme2"}
-                                               addedStyle={styles.fitContent}/>
+                                               addedStyle={styles.fitContent} clickHandler={() => {
+                            router.push(internalLinks.products.root)
+                        }}/>
                     </div>
 
                     <div className={`grid4 gapS`}>
