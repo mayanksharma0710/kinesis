@@ -179,10 +179,10 @@ const DropDownMenu = () => {
 
                 <hr/>
 
-                <CTAButton version={"inline"} ctaText={"Contact Us"} addedStyle={styles.ctaButton}
-                           clickHandler={() => {
-                               router.push(internalLinks.contactus)
-                           }}/>
+                {/*<CTAButton version={"inline"} ctaText={"Contact Us"} addedStyle={styles.ctaButton}*/}
+                {/*           clickHandler={() => {*/}
+                {/*               router.push(internalLinks.contactus)*/}
+                {/*           }}/>*/}
             </div>
         </>
     )
@@ -341,18 +341,18 @@ export default function NavBarLayout() {
 
     return (
         <div className={`${styles.container} colorScheme3`}>
-            <div className={`${styles.menuContainer} maxWidthContainer`}>
-                <Image src={companyLogo} alt="logo" width={100} height={100}/>
+            <div className={`${styles.menuContainer}`}>
+                <Image src={companyLogo} alt="logo" width={175}/>
 
                 <DropDownMenu/>
 
                 <div className={`${styles.desktop}`}>
                     <MenubarPrimitive/>
 
-                    <CTAButton version={"inline"} ctaText={"Contact Us"} addedStyle={styles.ctaButton}
-                               clickHandler={() => {
-                                   router.push(internalLinks.contactus)
-                               }}/>
+                    {/*<CTAButton version={"inline"} ctaText={"Contact Us"} addedStyle={styles.ctaButton}*/}
+                    {/*           clickHandler={() => {*/}
+                    {/*               router.push(internalLinks.contactus)*/}
+                    {/*           }}/>*/}
                 </div>
             </div>
         </div>
