@@ -17,9 +17,9 @@ export default function FooterLayout() {
     return (
         <div className={`paddedContainer ${styles.container} colorScheme3`}>
 
-            <div className={`${styles.top} maxWidthContainer`}>
+            <div className={`${styles.top}`}>
                 <div className={`${styles.logoContainer}`}>
-                    <Image src={companyLogo} alt={"kinesis it solution logo"} height={118} width={118}/>
+                    <Image src={companyLogo} alt={"kinesis it solution logo"} width={275}/>
                     <p className={`lightNormal`}>Consolidating Indian industry in a spirit of industrial patriotism —
                         driving growth, self-reliance and national pride.</p>
                 </div>
@@ -43,7 +43,7 @@ export default function FooterLayout() {
 
             <hr/>
 
-            <div className={`${styles.bottom} maxWidthContainer`}>
+            <div className={`${styles.bottom}`}>
                 <p className={`${styles.secondryText} lightNormal`}>© 2026 Kinesis IT Solution.</p>
                 <p className={`boldNormal ${styles.saffron}`}>जय हिन्द · JAI HIND</p>
             </div>
