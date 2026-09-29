@@ -1,9 +1,9 @@
 import Header1Layout from "@/ui/layouts/Header1Layout";
 import AccentedHeading1Layout from "@/ui/layouts/AccentedHeading1Layout";
 import ProductCardLayout from "@/ui/layouts/ProductCardLayout";
-import styles from "./page.module.css"
+import ServiceCardLayout from "@/ui/layouts/ServiceCardLayout";
 import CTA1Layout from "@/ui/layouts/CTA1Layout";
-import interNalLinks from "./../../const/internalRoutes.json"
+import internalLinks from "./../../const/internalRoutes.json"
 
 export default function Products() {
     return (
@@ -16,6 +16,7 @@ export default function Products() {
             <div className={"paddedContainer colorScheme2 "}>
                 <div className={"maxWidthContainer outerFlexContainer"}>
 
+                    {/*SUSTAINABILITY SOLUTIONS*/}
                     <div className={`columnFlexContainer gapS`}>
                         <AccentedHeading1Layout colorScheme={"colorScheme2"} headingText={"Sustainability Solution"}
                                                 version={"green"}/>
@@ -27,7 +28,7 @@ export default function Products() {
                                                bulletPoints={["0.5kW to multiple megawatts, modular", "No masts, towers or roof penetration", "Deployed across Defence, Telecom & Industry"]}
                                                colorScheme={"colorScheme2"}
                                                version={"green"}
-                                               linkUrl={interNalLinks.products.hybridPowerPlant}
+                                               linkUrl={internalLinks.products.hybridPowerPlant}
                             />
 
                             <ProductCardLayout headingText={"Carbon Capture"}
@@ -36,7 +37,7 @@ export default function Products() {
                                                bulletPoints={["Captured carbon produced as graphene", "Creates a revenue stream, not just cost", "POC plant operational in Meerut", "Deployed across Defence, Telecom & Industry"]}
                                                colorScheme={"colorScheme2"}
                                                version={"green"}
-                                               linkUrl={interNalLinks.products.carbonCapture}
+                                               linkUrl={internalLinks.products.carbonCapture}
                             />
 
                             <ProductCardLayout headingText={"Ambient Air Purification"}
@@ -45,7 +46,7 @@ export default function Products() {
                                                bulletPoints={["No water, no filters, low maintenance", "25–40% AQI improvement (Delhi field trial", "Ideal for pollution hotspots & industrial hubs", "Helps avoid GRAP economic losses"]}
                                                colorScheme={"colorScheme2"}
                                                version={"green"}
-                                               linkUrl={interNalLinks.products.ambientAirPurification}
+                                               linkUrl={internalLinks.products.ambientAirPurification}
                             />
 
                             <ProductCardLayout headingText={"Waste to Hydrogen"}
@@ -54,7 +55,7 @@ export default function Products() {
                                                bulletPoints={["Clean hydrogen fuel from waste", "Valuable metal-carbonate by-products", "Charcoal upgradable to graphene", "Tackles stubble-burning & municipal waste"]}
                                                colorScheme={"colorScheme2"}
                                                version={"green"}
-                                               linkUrl={interNalLinks.products.wasteToHydrogen}
+                                               linkUrl={internalLinks.products.wasteToHydrogen}
                             />
 
                             <ProductCardLayout headingText={"Plastic to Diesel"}
@@ -62,10 +63,11 @@ export default function Products() {
                                                bulletPoints={["India’s first policy-recognised solution", "8,000–24,000 L ULSD per day (80% yield)", "BS6 / Euro 6 compliant, < 8 ppm sulphur", "Designed as a carbon net-zero process"]}
                                                linkText={"View Details"}
                                                version={"green"} colorScheme={"colorScheme2"}
-                                               linkUrl={interNalLinks.products.plastictoDiesel}/>
+                                               linkUrl={internalLinks.products.plastictoDiesel}/>
                         </div>
                     </div>
 
+                    {/*DEFENCE SYSTEMS*/}
                     <div className={`columnFlexContainer gapS`}>
                         <AccentedHeading1Layout colorScheme={"colorScheme2"} headingText={"Defence Systems"}
                                                 version={"blue"}/>
@@ -76,11 +78,12 @@ export default function Products() {
                                                bulletPoints={["Built for surveillance & combat roles", "Indigenous design and manufacture", "Suited to defence & border security", "Detailed specifications on request"]}
                                                colorScheme={"colorScheme2"}
                                                version={"blue"}
-                                               linkUrl={interNalLinks.products.uavAndUcav}/>
+                                               linkUrl={internalLinks.products.uavAndUcav}/>
                         </div>
 
                     </div>
 
+                    {/*COMMUNICATIONS*/}
                     <div className={`columnFlexContainer gapS`}>
                         <AccentedHeading1Layout colorScheme={"colorScheme2"} headingText={"Communication"}
                                                 version={"saffron"}/>
@@ -91,10 +94,39 @@ export default function Products() {
                                                bulletPoints={["Built for surveillance & combat roles", "Indigenous design and manufacture", "Suited to defence & border security", "Detailed specifications on request"]}
                                                colorScheme={"colorScheme2"}
                                                version={"saffron"}
-                                               linkUrl={interNalLinks.products.private5g}/>
+                                               linkUrl={internalLinks.products.private5g}/>
                         </div>
                     </div>
 
+
+                </div>
+            </div>
+
+            <div className={"colorScheme2 outerFlexContainer paddedContainer"}>
+                <div className={`maxWidthContainer columnFlexContainer gapS`}>
+                    <ServiceCardLayout capsuleText={"DEFENCE"} headingText={"UCAV & UAV Consultation"}
+                                       bodyText={"Technical insight for high-stakes decision-making — guiding defence and government clients through the full lifecycle of unmanned aerial platforms."}
+                                       linkText={"Related: UAV & UCAV platforms"}
+                                       bulletPoints={["Platform selection & procurement — strategy guidance matched to mission requirements and budgets.", "Regulatory compliance support— navigating certification and airspace regulation.", "Operational integration expertise — embedding unmanned systems into existing operations."]}
+                                       colorScheme={"colorScheme2"} version={"blue"}
+                                       navigationUrl={internalLinks.products.uavAndUcav}
+                                       id={"defence"}/>
+
+                    <ServiceCardLayout capsuleText={"SUSTAINABILITY"} headingText={"Waste-to-Energy Solutions"}
+                                       bodyText={"Turning waste liabilities into reliable power generation — for municipalities, industrial clients, and energy developers."}
+                                       linkText={"Related: Waste to Hydrogen"}
+                                       bulletPoints={["Feasibility studies & technology selection — grounded assessment of the right conversion pathway.", "Regulatory navigation — permits, compliance and policy alignment.", "Project implementation support — from pilot to full commercial operation."]}
+                                       colorScheme={"colorScheme2"} version={"green"}
+                                       navigationUrl={""}
+                                       id={"sustainabilitySolutions"}/>
+
+                    <ServiceCardLayout capsuleText={"COMMUNICATION"} headingText={"Communications Solutions"}
+                                       bodyText={"Resilient, secure infrastructure for mission-critical operations — serving defence, government, and commercial clients."}
+                                       linkText={"Related: Private 5G Networks"}
+                                       bulletPoints={["Network design for mission-critical operations — engineered for reliability under pressure.", "Systems integration — connecting new capability with existing infrastructure.", "Interoperability planning — ensuring systems, agencies and vendors work as one."]}
+                                       colorScheme={"colorScheme2"} version={"saffron"}
+                                       navigationUrl={internalLinks.products.uavAndUcav}
+                                       id={"communication"}/>
                 </div>
             </div>
             <CTA1Layout colorScheme={"colorScheme3"}

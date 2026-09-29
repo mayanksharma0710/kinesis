@@ -37,14 +37,14 @@ export default function Home() {
                                 Industrial Nationalism · Made in India
                             </div>
 
-                            <p className={`h1`}>Fuelling to the self-reliant industrial growth in India</p>
+                            <p className={`h1`}>Fueling to the self reliant - Industrial growth in India.</p>
 
                             <p className={`regularNormal`}>
                                 Kinesis builds on the concept of Industrial Nationalism, with a special focus on
                                 building an ecosystem of indigenous inventors of Deep-Technology and ground break
                                 innovations. Our aim is to foster collaboration between the industry, startups and
                                 academia, promote indigenous innovation, and take pride in our nation's industrial
-                                heritage
+                                heritage.
                             </p>
                         </div>
 
@@ -63,14 +63,14 @@ export default function Home() {
                         </div>
 
                         <div className={`${styles.stats}`}>
-                            <div className={`${styles.attributes}`}>
-                                <p className={`${styles.saffron} h3`}>10 +</p>
-                                <p className={`regularNormal`}>Countries served by our tech</p>
-                            </div>
+                            {/*<div className={`${styles.attributes}`}>*/}
+                            {/*    <p className={`${styles.saffron} h3`}>10 +</p>*/}
+                            {/*    <p className={`regularNormal`}>Countries served by our tech</p>*/}
+                            {/*</div>*/}
 
                             <div className={`${styles.attributes}`}>
                                 <p className={`${styles.saffron} h3`}>10 +</p>
-                                <p className={`regularNormal`}>Expert Channel in countries</p>
+                                <p className={`regularNormal`}>Expert Channel in 10+ countries</p>
                             </div>
 
                             <div className={`${styles.attributes}`}>
@@ -151,7 +151,7 @@ export default function Home() {
                         />
 
                         <TextCard1Layout lineColor={"saffron"} backgroundColor={"background"}
-                                         headingText={"Global connections"}
+                                         headingText={"Global Reach"}
                                          bodyText={"Senior former diplomats and international marketing agencies opening doors worldwide."}
                                          colorScheme={"colorScheme1"}
                         />
@@ -269,7 +269,7 @@ export default function Home() {
                     <div className={`grid3 gapS`}>
 
                         <RegionCardLayout colorScheme={"colorScheme1"} region={"Middle East"}
-                                          countries={["UAE", "Kingdom of Saudi Arabia", "Egypt", "Jordan"]}
+                                          countries={["United Arab Emirates", "Egypt", "Jordan", "Saudi Arabia",]}
                                           version={"saffron"}/>
 
                         <RegionCardLayout colorScheme={"colorScheme1"} region={"Central America"}
@@ -284,7 +284,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <CTA1Layout colorScheme={"colorScheme3"} headingText={"Are you an Indian OEM or entrepreneur?"}
+            <CTA1Layout colorScheme={"colorScheme3"} headingText={"Are you an inventor or an investor ?"}
                         bodyText={"We love interacting with innovators and visionaries, let’s together build the ‘TEAM INDIA- India’s self-reliant supply chain. Let's build India's self-reliant supply chain together."}/>
         </>
     )
