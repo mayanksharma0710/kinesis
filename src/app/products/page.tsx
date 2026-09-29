@@ -129,6 +129,7 @@ export default function Products() {
                                        id={"communication"}/>
                 </div>
             </div>
+
             <CTA1Layout colorScheme={"colorScheme3"}
                         headingText={"Want a detailed brief or a technology demonstration?"}
                         bodyText={"Our specialists will walk you through specifications, deployment models and pilot programmes."}/>
