@@ -3,7 +3,7 @@
 import styles from "./FooterLayout.module.css"
 import Link from "next/link";
 import CTAButton from "@/ui/componenets/CTAButton";
-import companyLogo from "./../../../public/logo/logo.svg"
+import companyLogo from "../../../public/logo/logo.svg"
 import Image from "next/image"
 import {useRouter} from "next/navigation";
 import internalLinks from "./../../const/internalRoutes.json"
@@ -19,7 +19,7 @@ export default function FooterLayout() {
 
             <div className={`${styles.top}`}>
                 <div className={`${styles.logoContainer}`}>
-                    <Image src={companyLogo} alt={"kinesis it solution logo"} width={275}/>
+                    <Image src={companyLogo} alt={"kinesis it solution logo"} width={200}/>
                     <p className={`lightNormal`}>Consolidating Indian industry in a spirit of industrial patriotism —
                         driving growth, self-reliance and national pride.</p>
                 </div>
