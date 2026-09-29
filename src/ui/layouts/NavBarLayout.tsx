@@ -4,7 +4,6 @@ import styles from "./NavBarLayout.module.css"
 import Image from "next/image";
 import companyLogo from "../../../public/logo/logo.svg"
 import Link from "next/link";
-import CTAButton from "@/ui/componenets/CTAButton";
 import {useState} from "react";
 import HamburgerIconComponent from "../../../public/icons/HamburgerIconComponent";
 import {Menubar} from "radix-ui";
@@ -58,6 +57,36 @@ const DropDownMenu = () => {
                       onClick={() => toggleMenu()}>
                     <p>Home</p>
                 </Link>
+
+                <hr/>
+
+                <Link href={internalLinks.aboutus.root} className={`${styles.menuItemLink} boldNormal`}
+                      onClick={() => toggleMenu()}>
+                    <p>About Us</p>
+                    {/*<p className={`${isAbout && styles.transform}`}>▼</p>*/}
+                </Link>
+
+                {/*<div className={`${styles.linkCarrier} ${!isAbout && styles.hide}`}>*/}
+                {/*    <Link href={internalLinks.aboutus.companyOverview} className={`${styles.menuItemLink} lightNormal`}*/}
+                {/*          onClick={() => toggleMenu()}>*/}
+                {/*        <p>Company Overview</p>*/}
+                {/*    </Link>*/}
+
+                {/*    <Link href={internalLinks.aboutus.missionAndVision}*/}
+                {/*          className={`${styles.menuItemLink} lightNormal`} onClick={() => toggleMenu()}>*/}
+                {/*        <p>Mission and Vision</p>*/}
+                {/*    </Link>*/}
+
+                {/*    <Link href={internalLinks.aboutus.industrialNationalism}*/}
+                {/*          className={`${styles.menuItemLink} lightNormal`} onClick={() => toggleMenu()}>*/}
+                {/*        <p>Industrial Nationalism</p>*/}
+                {/*    </Link>*/}
+
+                {/*    <Link href={internalLinks.aboutus.ourTeam} className={`${styles.menuItemLink} lightNormal`}*/}
+                {/*          onClick={() => toggleMenu()}>*/}
+                {/*        <p>Our Team</p>*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
 
                 <hr/>
 
@@ -149,35 +178,6 @@ const DropDownMenu = () => {
 
                 <hr/>
 
-                <Link href={internalLinks.aboutus.root} className={`${styles.menuItemLink} boldNormal`}
-                      onClick={() => toggleMenu()}>
-                    <p>About Us</p>
-                    {/*<p className={`${isAbout && styles.transform}`}>▼</p>*/}
-                </Link>
-
-                {/*<div className={`${styles.linkCarrier} ${!isAbout && styles.hide}`}>*/}
-                {/*    <Link href={internalLinks.aboutus.companyOverview} className={`${styles.menuItemLink} lightNormal`}*/}
-                {/*          onClick={() => toggleMenu()}>*/}
-                {/*        <p>Company Overview</p>*/}
-                {/*    </Link>*/}
-
-                {/*    <Link href={internalLinks.aboutus.missionAndVision}*/}
-                {/*          className={`${styles.menuItemLink} lightNormal`} onClick={() => toggleMenu()}>*/}
-                {/*        <p>Mission and Vision</p>*/}
-                {/*    </Link>*/}
-
-                {/*    <Link href={internalLinks.aboutus.industrialNationalism}*/}
-                {/*          className={`${styles.menuItemLink} lightNormal`} onClick={() => toggleMenu()}>*/}
-                {/*        <p>Industrial Nationalism</p>*/}
-                {/*    </Link>*/}
-
-                {/*    <Link href={internalLinks.aboutus.ourTeam} className={`${styles.menuItemLink} lightNormal`}*/}
-                {/*          onClick={() => toggleMenu()}>*/}
-                {/*        <p>Our Team</p>*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
-
-                <hr/>
 
                 {/*<CTAButton version={"inline"} ctaText={"Contact Us"} addedStyle={styles.ctaButton}*/}
                 {/*           clickHandler={() => {*/}
@@ -208,10 +208,53 @@ const MenubarPrimitive = () => {
                                  onClick={() => navigateOnClick(internalLinks.home)}>Home</Menubar.Trigger>
             </Menubar.Menu>
 
+            <Menubar.Menu>
+                <Menubar.Trigger
+                    className={`${styles.Trigger} lightNormal colorScheme3 ${pathName === internalLinks.aboutus.root && styles.underLine}`}
+                    onClick={() => navigateOnClick(internalLinks.aboutus.root)}>About
+                    Us</Menubar.Trigger>
+
+                {/*<Menubar.Portal>*/}
+
+                {/*    <Menubar.Content*/}
+                {/*        className={`${styles.Content} ${localColorScheme}`}*/}
+                {/*        align="start"*/}
+                {/*        sideOffset={5}*/}
+                {/*        alignOffset={-3}*/}
+                {/*    >*/}
+                {/*        <Menubar.Item*/}
+                {/*            className={`${styles.Item} lightRegular ${localColorScheme}`}*/}
+                {/*            onSelect={() => {*/}
+                {/*                navigateOnClick(internalLinks.aboutus.companyOverview)*/}
+                {/*            }}>*/}
+                {/*            Company Overview*/}
+                {/*        </Menubar.Item>*/}
+
+                {/*        <Menubar.Item className={`${styles.Item} boldNormal ${localColorScheme}`} onSelect={() => {*/}
+                {/*            navigateOnClick(internalLinks.aboutus.missionAndVision)*/}
+                {/*        }}>*/}
+                {/*            Mission and Vision*/}
+                {/*        </Menubar.Item>*/}
+
+                {/*        <Menubar.Item className={`${styles.Item} lightRegular ${localColorScheme}`} onSelect={() => {*/}
+                {/*            navigateOnClick(internalLinks.aboutus.industrialNationalism)*/}
+                {/*        }}>*/}
+                {/*            Industrial Nationalism*/}
+                {/*        </Menubar.Item>*/}
+
+                {/*        <Menubar.Item className={`${styles.Item} boldNormal ${localColorScheme}`} onSelect={() => {*/}
+                {/*            navigateOnClick(internalLinks.aboutus.ourTeam)*/}
+                {/*        }}>*/}
+                {/*            Our Team*/}
+                {/*        </Menubar.Item>*/}
+
+                {/*    </Menubar.Content>*/}
+                {/*</Menubar.Portal>*/}
+            </Menubar.Menu>
 
             <Menubar.Menu>
                 <Menubar.Trigger
-                    className={`${styles.Trigger} lightNormal ${pathName === internalLinks.services.root && styles.underLine} ${pathName === internalLinks.products.root && styles.underLine}`}>Our
+                    className={`${styles.Trigger} boldNormal ${pathName === internalLinks.services.root && styles.underLine} ${pathName === internalLinks.products.root && styles.underLine}`}>Our
                     Offerings</Menubar.Trigger>
 
                 <Menubar.Portal>
@@ -288,49 +331,7 @@ const MenubarPrimitive = () => {
                 </Menubar.Portal>
             </Menubar.Menu>
 
-            <Menubar.Menu>
-                <Menubar.Trigger
-                    className={`${styles.Trigger} lightNormal colorScheme3 ${pathName === internalLinks.aboutus.root && styles.underLine}`}
-                    onClick={() => navigateOnClick(internalLinks.aboutus.root)}>About
-                    Us</Menubar.Trigger>
 
-                {/*<Menubar.Portal>*/}
-
-                {/*    <Menubar.Content*/}
-                {/*        className={`${styles.Content} ${localColorScheme}`}*/}
-                {/*        align="start"*/}
-                {/*        sideOffset={5}*/}
-                {/*        alignOffset={-3}*/}
-                {/*    >*/}
-                {/*        <Menubar.Item*/}
-                {/*            className={`${styles.Item} lightRegular ${localColorScheme}`}*/}
-                {/*            onSelect={() => {*/}
-                {/*                navigateOnClick(internalLinks.aboutus.companyOverview)*/}
-                {/*            }}>*/}
-                {/*            Company Overview*/}
-                {/*        </Menubar.Item>*/}
-
-                {/*        <Menubar.Item className={`${styles.Item} boldNormal ${localColorScheme}`} onSelect={() => {*/}
-                {/*            navigateOnClick(internalLinks.aboutus.missionAndVision)*/}
-                {/*        }}>*/}
-                {/*            Mission and Vision*/}
-                {/*        </Menubar.Item>*/}
-
-                {/*        <Menubar.Item className={`${styles.Item} lightRegular ${localColorScheme}`} onSelect={() => {*/}
-                {/*            navigateOnClick(internalLinks.aboutus.industrialNationalism)*/}
-                {/*        }}>*/}
-                {/*            Industrial Nationalism*/}
-                {/*        </Menubar.Item>*/}
-
-                {/*        <Menubar.Item className={`${styles.Item} boldNormal ${localColorScheme}`} onSelect={() => {*/}
-                {/*            navigateOnClick(internalLinks.aboutus.ourTeam)*/}
-                {/*        }}>*/}
-                {/*            Our Team*/}
-                {/*        </Menubar.Item>*/}
-
-                {/*    </Menubar.Content>*/}
-                {/*</Menubar.Portal>*/}
-            </Menubar.Menu>
         </Menubar.Root>
     );
 };
@@ -342,7 +343,7 @@ export default function NavBarLayout() {
     return (
         <div className={`${styles.container} colorScheme3`}>
             <div className={`${styles.menuContainer}`}>
-                <Image src={companyLogo} alt="logo" width={175}/>
+                <Image src={companyLogo} alt="logo" width={150}/>
 
                 <DropDownMenu/>
 
