@@ -8,7 +8,7 @@
 
     hr {
         border: 0.5px solid var(--color-text-secondary);
-        max-width: var(--max-width-xxl);
+        /*max-width: var(--max-width-xxl);*/
         width: 100%;
         margin: auto;
     }
@@ -23,6 +23,7 @@
     flex-direction: column;
     gap: var(--padding-section-s);
     width: 100%;
+    /*padding : 0 var(--dimension-6);*/
 }
 
 @media screen and (min-width: 768px) {
@@ -33,9 +34,12 @@
 }
 
 .logoContainer {
-    text-align: center;
     max-width: var(--max-width-xs);
     margin: auto;
+
+    p{
+        margin-top: var(--dimension-2);
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -56,6 +60,7 @@
     flex-direction: column;
     gap: var(--dimension-2);
     width: 100%;
+    /*padding : 0 var(--dimension-6);*/
 }
 
 @media screen and (min-width: 480px) {

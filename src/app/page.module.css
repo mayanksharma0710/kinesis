@@ -45,6 +45,11 @@
     background-color: var(--color-white-transparent-3);
 }
 
+.translucentButton:hover {
+    cursor: pointer;
+    border: 2px solid white;
+}
+
 .stats {
     display: flex;
     flex-direction: column;
@@ -116,7 +121,11 @@
 
 .ourSolutions {
     align-items: flex-end;
-    /*background-color: red;*/
+    width: 100%;
+}
+
+.normalButton {
+    margin: auto;
 }
 
 /*################*/

@@ -3,6 +3,7 @@
     flex-direction: row;
     gap: var(--dimension-2);
     align-items: center;
+    justify-content: center;
     padding: var(--dimension-2);
 
     width: fit-content;
