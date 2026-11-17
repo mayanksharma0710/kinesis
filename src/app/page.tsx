@@ -12,10 +12,10 @@ import exportMap from "./../../public/world_map.png"
 import Image from "next/image";
 import RegionCardLayout from "@/ui/layouts/RegionCardLayout";
 import TickerCardLayout from "@/ui/layouts/TickerCardLayout";
-import airForce from "./../../public/icons/indian_air_force.png"
-import bel from "./../../public/icons/bel.png"
-import bharatDynamics from "./../../public/icons/bharat dynamics limited.png"
-import indianNAvalServices from "./../../public/icons/indian navy.png"
+import airForce from "./../../public/icons/indian_air_force.svg"
+import bel from "./../../public/icons/bharat_electronics_limited.svg"
+import bharatDynamics from "./../../public/icons/bharat_dynamics_limited.svg"
+import indianNAvalServices from "./../../public/icons/indian_navy.svg"
 import ministry from "./../../public/icons/ministry of new and renewable enrgy.svg"
 import {useRouter} from "next/navigation";
 import internalLinks from "./../const/internalRoutes.json"
