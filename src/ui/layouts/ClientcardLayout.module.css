@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--dimension-2);
     align-items: center;
     justify-content: center;
