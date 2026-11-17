@@ -1,7 +1,7 @@
 import Header1Layout from "@/ui/layouts/Header1Layout";
 import ServiceCardLayout from "@/ui/layouts/ServiceCardLayout";
 import CTA1Layout from "@/ui/layouts/CTA1Layout";
-import internalUrl from "./../../const/internalRoutes.json"
+import internalLinks from "./../../const/internalRoutes.json"
 
 export default function Services() {
     return (
@@ -11,6 +11,7 @@ export default function Services() {
                 headingText={"Expert consulting, from strategy to deployment."}
                 bodyText={"Beyond our product portfolio, Kinesis offers specialist advisory services — helping institutions and enterprises make high-stakes technology decisions with confidence."}
                 colorScheme={"colorScheme3"}/>
+
             <div className={"colorScheme2 outerFlexContainer paddedContainer"}>
                 <div className={`maxWidthContainer columnFlexContainer gapS`}>
                     <ServiceCardLayout capsuleText={"DEFENCE"} headingText={"UCAV & UAV Consultation"}
@@ -18,7 +19,7 @@ export default function Services() {
                                        linkText={"Related: UAV & UCAV platforms"}
                                        bulletPoints={["Platform selection & procurement — strategy guidance matched to mission requirements and budgets.", "Regulatory compliance support— navigating certification and airspace regulation.", "Operational integration expertise — embedding unmanned systems into existing operations."]}
                                        colorScheme={"colorScheme2"} version={"blue"}
-                                       navigationUrl={internalUrl.products.uavAndUcav}
+                                       navigationUrl={internalLinks.products.uavAndUcav}
                                        id={"defence"}/>
 
                     <ServiceCardLayout capsuleText={"SUSTAINABILITY"} headingText={"Waste-to-Energy Solutions"}
@@ -34,7 +35,7 @@ export default function Services() {
                                        linkText={"Related: Private 5G Networks"}
                                        bulletPoints={["Network design for mission-critical operations — engineered for reliability under pressure.", "Systems integration — connecting new capability with existing infrastructure.", "Interoperability planning — ensuring systems, agencies and vendors work as one."]}
                                        colorScheme={"colorScheme2"} version={"saffron"}
-                                       navigationUrl={internalUrl.products.uavAndUcav}
+                                       navigationUrl={internalLinks.products.uavAndUcav}
                                        id={"communication"}/>
                 </div>
             </div>
